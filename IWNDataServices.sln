@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWNDataServices", "IWNDataServices\IWNDataServices.csproj", "{1D8C428B-8DCC-4C40-B6FD-C2FE8DF2BB9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWN.Entities", "IWN.Entities\IWN.Entities.csproj", "{6890B6CE-D7D1-4D38-83F6-1C3BEBCC0157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IWN.DAL", "IWN.DAL\IWN.DAL.csproj", "{97D0E7B4-905A-4A3A-A79B-8F51FDEB1B7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D8C428B-8DCC-4C40-B6FD-C2FE8DF2BB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8C428B-8DCC-4C40-B6FD-C2FE8DF2BB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8C428B-8DCC-4C40-B6FD-C2FE8DF2BB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8C428B-8DCC-4C40-B6FD-C2FE8DF2BB9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6890B6CE-D7D1-4D38-83F6-1C3BEBCC0157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6890B6CE-D7D1-4D38-83F6-1C3BEBCC0157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6890B6CE-D7D1-4D38-83F6-1C3BEBCC0157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6890B6CE-D7D1-4D38-83F6-1C3BEBCC0157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D0E7B4-905A-4A3A-A79B-8F51FDEB1B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D0E7B4-905A-4A3A-A79B-8F51FDEB1B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D0E7B4-905A-4A3A-A79B-8F51FDEB1B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D0E7B4-905A-4A3A-A79B-8F51FDEB1B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
