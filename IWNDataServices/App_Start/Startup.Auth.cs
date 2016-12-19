@@ -59,11 +59,11 @@ namespace IWNDataServices
             //    appId: "",
             //    appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "1022997254975-kfqirt46tp3719gs3ssd8s0kd2s0mksh.apps.googleusercontent.com",
+                ClientSecret = "MF1WnInNYDIJeGYsZuMpcaXx"
+            });
         }
     }
 }

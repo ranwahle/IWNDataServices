@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace IWN.Entities
 {
@@ -10,5 +11,8 @@ namespace IWN.Entities
         public decimal Sum { get; set; }
 
         public bool Accepted { get; set; }
+
+        [Key]
+        public int TransactionId { get; set; }
     }
 }

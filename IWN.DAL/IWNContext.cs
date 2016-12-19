@@ -13,5 +13,10 @@ namespace IWN.DAL
         public   DbSet<Member> Members { get; set; }
 
         public DbSet<Payment> Payments { get; set; }
+
+        public IWNContext() : base("IWN")
+        {
+
+        }
     }
 }
