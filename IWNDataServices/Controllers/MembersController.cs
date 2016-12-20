@@ -36,6 +36,12 @@ namespace IWNDataServices.Controllers
             new MembersBL().UpdateMember(member);
         }
 
+        [Route("api/Members"), HttpDelete]
+        public void DeleteMember(Member member)
+        {
+            new MembersBL().DeleteMember(member);
+        }
+
 
 
 

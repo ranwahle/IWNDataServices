@@ -33,6 +33,16 @@ namespace IWN.DAL
             }
         }
 
+        public void DeleteMembers(Member member)
+        {
+            using (var context = new IWNContext())
+            {
+                context.Members.Attach(member);
+                context.Entry(member).State = System.Data.Entity.EntityState.Deleted;
+                context.SaveChanges();
+            }
+        }
+
         public void UpdateMember(Member member)
         {
             using (var context = new IWNContext())
