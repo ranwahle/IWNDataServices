@@ -38,6 +38,12 @@ namespace IWN.DAL
             using (var context = new IWNContext())
             {
                 context.Members.Attach(member);
+                var payments = context.Payments.Where(payment => payment.MemberId == member.MemberId);
+                foreach (var payment in payments)
+                {
+                    context.Entry(payment).State = System.Data.Entity.EntityState.Deleted;
+                }
+
                 context.Entry(member).State = System.Data.Entity.EntityState.Deleted;
                 context.SaveChanges();
             }
