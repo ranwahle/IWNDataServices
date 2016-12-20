@@ -52,6 +52,7 @@
     <Compile Include="IWNContext.cs" />
     <Compile Include="MembersDAL.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PaymentsDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
