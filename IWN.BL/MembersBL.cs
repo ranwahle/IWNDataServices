@@ -25,9 +25,9 @@ namespace IWN.BL
             new MembersDAL().UpdateMember(member);
         }
 
-        public void DeleteMember(Member member)
+        public void DeleteMember(int memberId)
         {
-            new MembersDAL().DeleteMembers(member);
+            new MembersDAL().DeleteMembers(memberId);
         }
     }
 }

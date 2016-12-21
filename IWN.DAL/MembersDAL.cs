@@ -13,7 +13,7 @@ namespace IWN.DAL
         {
             using(var context = new IWNContext())
             {
-                return context.Members.ToList();
+                return context.Members.Where(member => member.State != State.Deleted).ToList();
             } 
         }
 
@@ -33,18 +33,20 @@ namespace IWN.DAL
             }
         }
 
-        public void DeleteMembers(Member member)
+        public void DeleteMembers(int memberId)
         {
             using (var context = new IWNContext())
             {
-                context.Members.Attach(member);
-                var payments = context.Payments.Where(payment => payment.MemberId == member.MemberId);
-                foreach (var payment in payments)
+                var memberToDelete = context.Members.First(member => member.MemberId == memberId);
+                if (memberToDelete == null)
                 {
-                    context.Entry(payment).State = System.Data.Entity.EntityState.Deleted;
+                    return;
                 }
 
-                context.Entry(member).State = System.Data.Entity.EntityState.Deleted;
+                memberToDelete.State = State.Deleted;
+                context.Entry(memberToDelete).State = System.Data.Entity.EntityState.Modified;
+
+               
                 context.SaveChanges();
             }
         }

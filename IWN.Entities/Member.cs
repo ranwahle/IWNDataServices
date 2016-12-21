@@ -26,7 +26,7 @@ namespace IWN.Entities
         [Key]
         public int MemberId { get; set; }
 
-
+        public State State { get; set; }
 
     }
 }
