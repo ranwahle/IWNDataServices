@@ -10,9 +10,9 @@ namespace IWN.BL
 {
     public class MembersBL
     {
-        public List<Member> GetAllMembers()
+        public async  Task< List<Member>> GetAllMembers()
         {
-            return new MembersDAL().GetAllMembers();
+            return await new MembersDAL().GetAllMembers();
         }
 
         public void AddMember(Member member)

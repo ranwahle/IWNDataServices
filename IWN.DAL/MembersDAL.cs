@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,12 +10,17 @@ namespace IWN.DAL
 {
     public class MembersDAL
     {
-        public List<Member> GetAllMembers()
+        public Task< List<Member>> GetAllMembers()
         {
-            using(var context = new IWNContext())
-            {
-                return context.Members.Where(member => member.State != State.Deleted).ToList();
-            } 
+          return Task.Run(() =>
+          {
+              using (var context = new IWNContext())
+              {
+                  return context.Members.Include(m => m.Payments).Where(member => member.State != State.Deleted)
+
+                      .ToList();
+              }
+          }); 
         }
 
         public void AddMember(Member member)
