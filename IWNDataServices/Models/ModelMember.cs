@@ -11,6 +11,7 @@ namespace IWNDataServices.Models
     public class ModelMember
     {
        
+       
         public ModelMember()
         {
 
@@ -28,6 +29,7 @@ namespace IWNDataServices.Models
             newMember.MemberId = member.MemberId;
             newMember.State = member.State;
             newMember.PhoneNumber = member.PhoneNumber;
+            newMember.FromDate =  member.FromDate == DateTime.MinValue ? null : member.FromDate ;
              if (member.Payments != null && member.Payments.Count != 0)
             {
                 newMember.ToDate = member.Payments.Max(p => p.PaymentDate).AddYears(1);
@@ -49,5 +51,6 @@ namespace IWNDataServices.Models
         public DateTime?  ToDate { get; set; }
 
         public string PhoneNumber { get; set; }
+        public DateTime? FromDate { get; set; }
     }
 }

@@ -10,14 +10,25 @@ namespace IWN.BL
 {
     public class MembersBL
     {
+        private static DateTime MinSQLDate = new DateTime(1900,  1, 1);
         public async  Task< List<Member>> GetAllMembers()
         {
-            return await new MembersDAL().GetAllMembers();
+            var members = await new MembersDAL().GetAllMembers();
+
+            members.ForEach(member =>
+            {
+                if (member.FromDate == MinSQLDate )
+                {
+                    member.FromDate = null;
+                }
+            });
+
+            return members;
         }
 
-        public void AddMember(Member member)
+        public Member AddMember(Member member)
         {
-            new MembersDAL().AddMember(member);
+           return new MembersDAL().AddMember(member);
         }
 
         public void UpdateMember(Member member)

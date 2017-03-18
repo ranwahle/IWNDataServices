@@ -14,7 +14,7 @@ namespace IWN.Entities
       
         public string FirstName { get; set; }
 
-      
+        public DateTime? FromDate { get; set; }
         public string LastName { get; set; }
 
       

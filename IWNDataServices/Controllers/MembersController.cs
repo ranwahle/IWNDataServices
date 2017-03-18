@@ -32,9 +32,9 @@ namespace IWNDataServices.Controllers
 
         [Route("api/Members"), HttpPost]
        
-        public void AddMember(Member member)
+        public Member AddMember(Member member)
         {
-            new MembersBL().AddMember(member);
+           return  new MembersBL().AddMember(member);
         }
 
         [Route("api/Members"), HttpPut]

@@ -23,11 +23,12 @@ namespace IWN.DAL
           }); 
         }
 
-        public void AddMember(Member member)
+        public Member AddMember(Member member)
         {
             if (member.MemberId != 0)
             {
                 UpdateMember(member);
+                
             }
             else
             {
@@ -37,6 +38,7 @@ namespace IWN.DAL
                     context.SaveChanges();
                 }
             }
+            return member;
         }
 
         public void DeleteMembers(int memberId)

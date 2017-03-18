@@ -240,3 +240,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/IWNDataServices/Properties/PublishProfiles/IWNDataServices20170306094512 - Web Deploy.pubxml
+*.config
+/IWNDataServices/web.config
